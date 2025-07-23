@@ -1,0 +1,275 @@
+:root {
+  --primary: #4f8cff;
+  --secondary: #232946;
+  --accent: #eebbc3;
+  --bg: #f4f6fb;
+  --white: #fff;
+  --gray: #6b7280;
+  --radius: 12px;
+  --shadow: 0 4px 24px rgba(79, 140, 255, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', Arial, sans-serif;
+  background: var(--bg);
+  color: var(--secondary);
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  background: var(--white);
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 0;
+}
+
+.logo {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: 1px;
+}
+
+.logo span {
+  color: var(--secondary);
+}
+
+nav a {
+  margin-left: 2rem;
+  text-decoration: none;
+  color: var(--secondary);
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: var(--primary);
+}
+
+.btn-nav {
+  background: var(--primary);
+  color: var(--white) !important;
+  padding: 0.5rem 1.2rem;
+  border-radius: var(--radius);
+  margin-left: 2rem;
+  font-weight: 700;
+  transition: background 0.2s;
+}
+
+.btn-nav:hover {
+  background: var(--secondary);
+}
+
+.hero {
+  background: linear-gradient(120deg, var(--primary) 0%, var(--secondary) 100%);
+  color: var(--white);
+  padding: 5rem 0 4rem 0;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #e0e7ff;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: var(--secondary);
+  padding: 0.9rem 2.2rem;
+  border-radius: var(--radius);
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: var(--shadow);
+}
+
+.btn-primary:hover {
+  background: var(--white);
+  color: var(--primary);
+}
+
+.features {
+  padding: 4rem 0 3rem 0;
+  background: var(--bg);
+}
+
+.features h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 2.5rem;
+  font-weight: 700;
+}
+
+.features-grid {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.feature-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  flex: 1 1 250px;
+  max-width: 320px;
+  min-width: 220px;
+  transition: transform 0.2s;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px) scale(1.03);
+}
+
+.icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.7rem;
+  color: var(--primary);
+}
+
+.feature-card p {
+  color: var(--gray);
+}
+
+.about {
+  padding: 4rem 0;
+  background: var(--white);
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  flex: 1 1 350px;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.about-text p {
+  margin-bottom: 1.5rem;
+  color: var(--gray);
+}
+
+.btn-secondary {
+  background: var(--primary);
+  color: var(--white);
+  padding: 0.7rem 1.7rem;
+  border-radius: var(--radius);
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.btn-secondary:hover {
+  background: var(--accent);
+  color: var(--secondary);
+}
+
+.about-image {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.about-image img {
+  max-width: 100%;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.cta {
+  background: linear-gradient(120deg, var(--primary) 0%, var(--secondary) 100%);
+  color: var(--white);
+  padding: 3.5rem 0;
+  text-align: center;
+}
+
+.cta-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.cta-content p {
+  margin-bottom: 2rem;
+  color: #e0e7ff;
+}
+
+footer {
+  background: var(--secondary);
+  color: var(--white);
+  text-align: center;
+  padding: 1.2rem 0;
+  font-size: 1rem;
+  margin-top: 0;
+}
+
+@media (max-width: 900px) {
+  .about-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .features-grid {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  .features h2, .about-text h2, .cta-content h2 {
+    font-size: 1.5rem;
+  }
+  .feature-card {
+    padding: 1.2rem 1rem;
+  }
+}
